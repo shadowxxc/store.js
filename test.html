@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web Storage</title>
+  <script src="store.js"></script>
+</head>
+<body>
+<script>
+  var b=storage;
+  b.set({name:"aaa",age:11,date:244543});
+  b.set({name:"bbb",age:55,date:9888},"session");
+  console.log(b.get());
+  console.log(typeof  b.get("age"));
+  //当个参数为session，默认为取sessionStorage的所有信息
+  console.log(b.get("session"));
+ // console.log(b.del("date","session"));
+ //console.log(b.del("date"));
+  //console.log(b.del());
+  //console.log(b.del("session"));
+  //console.log(b.forEach());
+  //console.log(b.forEach("session"));
+  console.log(b.size());
+  console.log(b.size("session"));
+
+
+</script>
+</body>
+</html>
